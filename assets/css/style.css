@@ -204,6 +204,11 @@ input {
   position: relative;
 }
 
+.scroll-header {
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px var(--first-color);
+}
+
 .active__link::before {
   content: "";
   position: absolute;

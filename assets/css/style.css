@@ -9,6 +9,9 @@
   --title-color: hsl(250, 8%, 15%);
   --text-color: hsl(250, 8%, 35%);
   --body-color: hsl(250, 60%, 98%);
+  --first-color: hsl(9, 100%, 64%);
+  --first-color-500: hsl(9, 100%, 60%);
+
   --container-color: #fff;
   --shadow: hsla(0, 0%, 15%, 0.1);
   --scroll-bar-color: hsl(250, 12%, 90%);
@@ -114,7 +117,7 @@ input {
 
 .container {
   max-width: 960px;
-  /* background-color: tomato; */
+  background-color: tomato;
   margin-right: auto;
   margin-left: auto;
 }
@@ -212,7 +215,8 @@ input {
   /* border-radius: 50%; */
 }
 
-/* cart */
+/* ************************************** cart ***************************************** */
+
 .cart {
   position: fixed;
   background-color: var(--body-color);
@@ -271,7 +275,7 @@ input {
 .cart__price {
   display: block;
   font-size: var(--small-font-size);
-  color: red;
+  color: var(--first-color);
   margin-bottom: var(--mb-1-5);
 }
 
@@ -298,7 +302,7 @@ input {
 
 .cart__amount-trash {
   font-size: 1.15rem;
-  color: red;
+  color: var(--first-color);
   cursor: pointer;
 }
 
@@ -324,5 +328,87 @@ input {
 }
 
 .show-cart {
+  right: 0;
+}
+
+/* *********************************************** login ****************************************** */
+
+.login {
+  position: fixed;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  width: 420px;
+  box-shadow: -2px 0 4px var(--shadow);
+  height: 100%;
+  top: 0;
+  right: -100%;
+  padding: 3.5rem 2rem;
+  transition: 0.4s;
+}
+
+.login__title-center {
+  text-align: center;
+  margin-bottom: var(--mb-3);
+  font-size: var(--h2-font-size);
+}
+
+.login__close {
+  font-size: 2rem;
+  color: var(--title-color);
+  position: absolute;
+  top: 1.25rem;
+  right: 0.9rem;
+  cursor: pointer;
+}
+
+.login__form {
+  row-gap: 1.5rem;
+}
+
+.login__content {
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+
+.login__label {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.login__input {
+  width: 100%;
+  background-color: var(--container-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  padding: 0.25rem 0.5rem 0.5rem 0;
+}
+
+.signup {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.signup a {
+  color: var(--first-color);
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+
+  transition: 0.4s;
+}
+
+.button:hover {
+  background-color: var(--first-color-500);
+}
+
+.show-login {
   right: 0;
 }

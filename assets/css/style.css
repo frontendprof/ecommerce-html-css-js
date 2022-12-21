@@ -114,10 +114,32 @@ input {
   outline: none;
 }
 
+/* ##################### REUSABLE CSS CLASSES ##################### */
+
+.section {
+  padding: 7rem 0 2rem;
+}
+
+.section__title,
+.breadcrumb__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__title,
+.breadcrumb__subtitle {
+  margin-bottom: var(--mb-3);
+}
+
+.section__title,
+.breadcrumb__title,
+.breadcrumb__subtitle {
+  text-align: center;
+}
+
 /* ======================= Layout ==================== */
 
 .container {
-  max-width: 960px;
+  max-width: 968px;
   /* background-color: tomato; */
   margin-right: auto;
   margin-left: auto;
@@ -558,4 +580,92 @@ input {
 .discount__title {
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-2);
+}
+
+/* new arrivals section */
+.new__container {
+  padding-top: 1rem;
+}
+
+.new__img {
+  width: 150px;
+  margin-bottom: var(--mb-1);
+
+  transition: 0.3s;
+}
+
+.new__content {
+  position: relative;
+  background-color: var(--container-color);
+  width: 310px;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  text-align: center;
+
+  /* border: 1px solid tomato; */
+
+  overflow: hidden;
+}
+
+.new__tag {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.new__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+
+.new__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.new__prices {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.new__price {
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+}
+
+.new__discount {
+  color: var(--first-color);
+  font-size: var(--smaller-font-size);
+  text-decoration: line-through;
+  font-weight: var(--font-medium);
+}
+
+.new__button {
+  display: inline-flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+  position: absolute;
+  bottom: 0;
+  right: -3rem;
+
+  transition: 0.3s;
+}
+
+.new__icon {
+  font-size: 1.25rem;
+}
+
+.new__content:hover .new__img {
+  transform: translateY(-0.5rem);
+}
+
+.new__content:hover .new__button {
+  right: 0;
 }

@@ -10,7 +10,9 @@
   --text-color: hsl(250, 8%, 35%);
   --body-color: hsl(250, 60%, 98%);
   --first-color: hsl(9, 100%, 64%);
-  --first-color-500: hsl(9, 100%, 60%);
+  --first-color-500: hsl(9, 100%, 55%);
+  --scroll-bar-color: hsl(250, 12%, 90%);
+  --scroll-thumb-color: hsl(250, 12%, 80%);
 
   --container-color: #fff;
   --shadow: hsla(0, 0%, 15%, 0.1);
@@ -830,4 +832,43 @@ input {
   text-align: center;
   font-size: var(--smaller-font-size);
   margin-top: 6rem;
+}
+
+/* scrollup */
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -30%;
+  background-color: var(--first-color);
+  border-radius: 0.4rem;
+  display: inline-flex;
+  padding: 0.25rem;
+  z-index: var(--z-tooltip);
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.scrollup:hover {
+  opacity: 1;
+}
+
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.show__scroll {
+  bottom: 3rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0.6rem;
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
 }

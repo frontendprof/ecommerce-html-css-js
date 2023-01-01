@@ -138,6 +138,10 @@ input {
   text-align: center;
 }
 
+.breadcrumb__subtitle span {
+  color: var(--first-color);
+}
+
 /* ======================= Layout ==================== */
 
 .container {
